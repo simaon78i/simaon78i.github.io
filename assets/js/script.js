@@ -48,6 +48,19 @@ function resetArmor() {
     ironManPic.src = "assets/images/ironManImage.jpg"; // Reverts to the original Iron Man image
 }
 
+function changeColor(){
+    this.style.color="yellow";
+    var audio=new Audio("assets/sounds/buttons.wav");
+    audio.play();
+}
+
+function resetColor(){
+    this.style.color="";
+}
+document.querySelectorAll("a").forEach(link=>{link.addEventListener("click",changeColor);
+                                    link.addEventListener("mouseover",changeColor);
+                                    link.addEventListener("mouseout",resetColor);});
+
 batmanPic.addEventListener("mouseover", fromOtoR);
 batmanPic.addEventListener("mouseout", fromRtoO);
 capAmericaPic.addEventListener("mouseover", makeCapBigger);
