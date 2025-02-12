@@ -1,6 +1,6 @@
 // Adding event listeners to the background color change buttons
 const colorChangeButtons = document.querySelectorAll('.color-change-button');
-
+var isClick=false;
 colorChangeButtons.forEach(button => {
     button.addEventListener('click', function() {
         // Get the color from the button's data-color attribute
@@ -48,10 +48,15 @@ function resetArmor() {
     ironManPic.src = "assets/images/ironManImage.jpg"; // Reverts to the original Iron Man image
 }
 
-function changeColor(){
+function changeColor(event){
     this.style.color="yellow";
-    var audio=new Audio("assets/sounds/buttons.wav");
-    audio.play();
+    if(event.type==="click"){
+        isClick=true;
+    }
+    if(isClick){
+        var audio=new Audio("assets/sounds/buttons.wav");
+        audio.play();
+    }
 }
 
 function resetColor(){
