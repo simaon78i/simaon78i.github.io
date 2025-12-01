@@ -1,6 +1,6 @@
 :root {
     /* צבעי Dark Mode */
-    --primary-color: #4CAF50; /* ירוק בולט (יכול להיות גם כחול כהה: #90CAF9) */
+    --primary-color: #4CAF50; /* ירוק בולט */
     --text-color: #e0e0e0; /* טקסט בהיר */
     --bg-color: #121212; /* רקע כהה מאוד */
     --card-bg: #1e1e1e; /* רקע כרטיס כהה יותר */
@@ -24,7 +24,7 @@ body {
     width: 90%;
     background: var(--card-bg);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* צל כהה יותר */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
     overflow: hidden;
     text-align: center;
     padding: 40px 20px;
@@ -43,7 +43,7 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: white; /* לבן */
+    color: white; 
 }
 
 .tagline {
@@ -67,11 +67,11 @@ h1 {
     max-width: 600px;
     margin: 0 auto 40px auto;
     padding: 20px;
-    background-color: var(--secondary-bg); /* רקע כהה משני */
+    background-color: var(--secondary-bg); 
     border-radius: 10px;
-    direction: ltr; /* יישור משמאל לימין */
-    text-align: left; /* יישור לשמאל */
-    border-left: 4px solid var(--primary-color); /* פס צבעוני בצד שמאל */
+    direction: ltr; 
+    text-align: left; 
+    border-left: 4px solid var(--primary-color); 
     border-right: none;
 }
 
@@ -139,7 +139,7 @@ h1 {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: var(--card-bg); /* טקסט כהה על כפתור בהיר */
+    color: var(--card-bg); 
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
