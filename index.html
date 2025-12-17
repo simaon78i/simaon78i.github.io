@@ -1,102 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shimon Ifrach | Personal Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <div class="container">
-        <img src="assets/git hub picture.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Shimon Ifrach" class="profile-img">
-        
-        <h1>Shimon Ifrach</h1>
-        <p class="tagline">
-            Computer Science Student at THE HEBREW UNIVERSITY OF JERUSALEM | FullStack Developer
-        </p>
-
-        <div class="about-section">
-            <h2>About Me</h2>
-            <p>
-                I am a highly motivated Computer Science student (B.Sc., Hebrew University, expected 2027) with a strong foundation in Software Engineering and hands-on development.
-                <br><br>
-                I currently work as an <b>FullStack Developer</b>, building upon my experience as a Full Stack Developer and a high-school Computer Science teacher. I am proficient in a diverse technical stack including ASP.NET (C#), Java, Python, and core web technologies (HTML/CSS/JS).
-                <br><br>
-                My notable projects include <b>MoodCast</b>, a smart web application that recommends movies based on the user's mood using an AI agent. Driven by curiosity and discipline—a trait honed through competitive sports—I am self-taught, independent, and eager to leverage my skills in a challenging technical role.
-            </p>
-        </div>
-
-        <div class="skills-section">
-            <h2>Technical Skills</h2>
-            
-            <div class="skill-category">
-                <strong><i class="fas fa-terminal"></i> Programming Languages</strong>
-                <ul class="skill-list">
-                    <li><i class="fab fa-python"></i> Python</li>
-                    <li><i class="fas fa-hashtag"></i> C#</li>
-                    <li><i class="fab fa-java"></i> Java</li>
-                    <li><i class="fab fa-js"></i> JavaScript</li>
-                    <li><i class="fas fa-code"></i> C / C++</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <strong><i class="fas fa-globe"></i> Web & Backend Technologies</strong>
-                <ul class="skill-list">
-                    <li><i class="fa-brands fa-react"> </i> React</li>
-                    <li><i class="fa-brands fa-flutter"></i> Flutter </li>
-                    <li><i class="fas fa-server"></i> ASP.NET Framework</li>
-                    <li><i class="fab fa-html5"></i> HTML</li>
-                    <li><i class="fab fa-css3-alt"></i> CSS</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category">
-                <strong><i class="fas fa-database"></i> Data & Tools</strong>
-                <ul class="skill-list">
-                    <li><i class="fas fa-database"></i> PostgreSQL</li>
-                    <li><i class="fas fa-code-branch"></i> Git</li>
-                    <li><i class="fas fa-cubes"></i> OOP / Data Structures</li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="buttons-container">
-            <a href="assets/Resume - Shimon Ifrach.pdf" class="btn btn-primary" target="_blank">
-                my CV (PDF)
-            </a>
-            
-            <a href="https://github.com/simaon78i" class="btn btn-outline" target="_blank">
-                <i class="fab fa-github"></i>
-                personal projects (GitHub)
-            </a>
-
-            <a href="https://www.linkedin.com/in/shimon-ifrach-a022b5215/" class="btn btn-outline" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                LinkedIn profile
-            </a>
-        </div>
-
-        <div class="social-links">
-            <a href="mailto:Simaon78ifrac@gmail.com" class="social-icon" title="Send Email"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+972538661635" class="social-icon" title="Call"><i class="fas fa-phone"></i></a>
-        </div>
+<div class="project-card">
+    <h2><i class="fas fa-star"></i> Featured Project: MoodCast</h2>
+    <p>
+        An AI-powered movie recommendation PWA that suggests films based on your current mood. 
+        It features a custom cinematic loading engine, Google Gemini AI integration, and secure payments via Stripe.
+    </p>
+    
+    <div class="project-tags">
+        <span class="tag">ASP.NET</span>
+        <span class="tag">Google Gemini AI</span>
+        <span class="tag">PWA</span>
+        <span class="tag">PostgreSQL</span>
     </div>
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <div class="project-buttons">
+        <a href="https://moodcastapp.somee.com/" class="btn-small" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Visit Site
+        </a>
 
+        <a href="assets/MoodCast.apk" class="btn-small btn-success" download>
+            <i class="fab fa-android"></i> Download APK
+        </a>
 
+        <a href="https://github.com/simaon78i/MoodCast" class="btn-small btn-outline" target="_blank">
+            <i class="fab fa-github"></i> Source Code
+        </a>
+    </div>
+</div>
 
+<style>
+    /* CSS for the new Project Card */
+    .project-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 25px 0;
+        text-align: left;
+    }
 
+    .project-card h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        color: #e74c3c; /* A nice highlight color */
+    }
 
+    .project-tags {
+        margin: 15px 0;
+    }
 
+    .tag {
+        background: #34495e;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
 
+    .project-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
 
+    .btn-small {
+        padding: 8px 15px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: 0.3s;
+    }
 
+    .btn-small:not(.btn-outline) {
+        background: #2980b9;
+        color: white;
+    }
 
+    .btn-success {
+        background: #27ae60 !important;
+    }
+
+    .btn-small.btn-outline {
+        border: 1px solid #2980b9;
+        color: #2980b9;
+    }
+
+    .btn-small:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+    }
+</style>
