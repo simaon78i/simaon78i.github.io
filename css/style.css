@@ -180,49 +180,67 @@ h1 {
     .container { padding: 30px 15px; }
 }
 
-/* --- Featured Project Box Styling --- */
-
+/* --- Featured Project Box with Subtle Gradient --- */
 .featured-project-box {
-    background: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
+    /* Subtle gradient from reddish to bluish to match your brand */
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.12) 0%, rgba(52, 152, 219, 0.08) 100%);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    padding: 25px;
-    margin: 20px 0 30px 0;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 30px 0;
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Glassmorphism effect overlay */
+.featured-project-box::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
 }
 
 .featured-project-box:hover {
-    transform: translateY(-5px); /* Gentle lift on hover */
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(231, 76, 60, 0.4);
 }
 
 .project-badge {
-    background: rgba(231, 76, 60, 0.1);
-    color: #e74c3c;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
     display: inline-block;
 }
 
 .featured-project-box h2 {
     margin-top: 0;
-    color: #e74c3c; /* Highlight color for the title */
+    color: #ffffff;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.6rem;
+    gap: 12px;
+}
+
+.featured-project-box h2 i {
+    color: #e74c3c;
 }
 
 .project-description {
-    color: #ecf0f1;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
+    color: #d1d8e0;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1rem;
 }
 
 .project-actions {
@@ -231,32 +249,23 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* Specific styling for the project buttons */
 .btn-project {
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
     font-size: 0.95rem;
     border: none;
-    cursor: pointer;
 }
 
-.btn-visit { 
-    background-color: #3498db; 
-    color: white !important; 
-}
-
-.btn-apk { 
-    background-color: #27ae60; 
-    color: white !important; 
-}
+.btn-visit { background: #3498db; color: white !important; }
+.btn-apk { background: #27ae60; color: white !important; }
 
 .btn-project:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    filter: brightness(1.1);
+    filter: brightness(1.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
