@@ -179,3 +179,84 @@ h1 {
     h1 { font-size: 2rem; }
     .container { padding: 30px 15px; }
 }
+
+/* --- Featured Project Box Styling --- */
+
+.featured-project-box {
+    background: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0 30px 0;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.featured-project-box:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+.project-badge {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.featured-project-box h2 {
+    margin-top: 0;
+    color: #e74c3c; /* Highlight color for the title */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+}
+
+.project-description {
+    color: #ecf0f1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Specific styling for the project buttons */
+.btn-project {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-visit { 
+    background-color: #3498db; 
+    color: white !important; 
+}
+
+.btn-apk { 
+    background-color: #27ae60; 
+    color: white !important; 
+}
+
+.btn-project:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    filter: brightness(1.1);
+}
