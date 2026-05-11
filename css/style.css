@@ -93,36 +93,33 @@ h1 {
 }
 
 .skill-item {
-    /* רקע לבנבן משמעותי (25%) ליצירת קונטרסט גבוה לאייקונים כהים */
-    background: rgba(255, 255, 255, 0.25); 
+    /* גישה חדשה: צבע לבן מט עם שקיפות גבוהה מאוד - זה חייב להיראות לבן */
+    background-color: #f5f5f5 !important; 
     padding: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    
-    /* אפקט זכוכית חלבית */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
 }
 
 .skill-item i {
-    /* הבהרה וחיזוק הצבעים של הסמלים */
-    filter: brightness(1.2) contrast(1.1); 
+    /* הסמלים צריכים להיות כהים יותר על רקע לבן */
+    filter: contrast(1.2); 
+    font-size: 2.5rem;
 }
 
 .skill-item:hover {
-    transform: scale(1.15) translateY(-5px);
-    background: rgba(255, 255, 255, 0.35); 
-    border-color: var(--primary-color);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+    transform: scale(1.1) translateY(-5px);
+    background-color: #ffffff !important; 
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
 }
 
-/* Academic Skills - Glass Capsules */
+/* Academic Skills - Capsules */
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -132,10 +129,9 @@ h1 {
 }
 
 .skill-list li {
-    /* רקע לבנבן (15%) לאחידות עם הסמלים למעלה */
-    background: rgba(255, 255, 255, 0.15); 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
+    /* צבע אפור-לבן מוצק יחסית */
+    background-color: #3d3d3d; 
+    border: 1px solid #555;
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -143,13 +139,13 @@ h1 {
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-    color: #ffffff; /* טקסט לבן בוהק לקריאות מקסימלית */
+    color: #fff;
     font-weight: 500;
 }
 
 .skill-list li:hover {
     border-color: var(--primary-color);
-    background: rgba(76, 175, 80, 0.2);
+    background-color: #4a4a4a;
     transform: translateY(-2px);
 }
 
@@ -177,40 +173,7 @@ h1 {
     border-color: var(--primary-color);
 }
 
-.project-badge {
-    background-color: var(--primary-color);
-    color: var(--card-bg);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    display: inline-block;
-}
-
-.featured-project-box h2 {
-    margin-top: 0;
-    color: white;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.project-description {
-    color: #b0b0b0;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.project-actions {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* Buttons */
+/* Rest of the buttons and social icons stay the same */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -221,64 +184,19 @@ h1 {
     font-weight: 500;
     transition: 0.3s ease;
 }
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--card-bg); 
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid #333;
-    color: var(--text-color);
-}
-
-.btn-project {
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-}
-
+.btn-primary { background-color: var(--primary-color); color: var(--card-bg); }
+.btn-outline { background-color: transparent; border: 2px solid #333; color: var(--text-color); }
+.btn-project { padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; }
 .btn-visit { background-color: #2196F3; color: white !important; }
 
-/* Social Links */
-.social-links {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+.social-links { margin-top: 40px; display: flex; justify-content: center; gap: 20px; }
+.social-icon { font-size: 1.8rem; color: #999; transition: color 0.3s ease; }
+.social-icon:hover { color: var(--primary-color); }
 
-.social-icon {
-    font-size: 1.8rem;
-    color: #999;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: var(--primary-color);
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
     h1 { font-size: 2rem; }
     .container { padding: 30px 15px; }
-    .skill-icons-grid {
-        justify-content: center;
-        gap: 12px;
-    }
-    .skill-item {
-        padding: 10px;
-    }
-    .skill-item i {
-        font-size: 2rem !important;
-    }
-    .featured-project-box h2 {
-        font-size: 1.3rem;
-    }
+    .skill-icons-grid { justify-content: center; gap: 12px; }
+    .skill-item { padding: 10px; }
+    .skill-item i { font-size: 2rem !important; }
 }
