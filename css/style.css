@@ -93,15 +93,15 @@ h1 {
 }
 
 .skill-item {
-    /* אפקט זכוכית לבנה כהה - ניגודיות גבוהה לסמלים כהים */
-    background: rgba(255, 255, 255, 0.15); 
+    /* רקע לבנבן משמעותי (25%) ליצירת קונטרסט גבוה לאייקונים כהים */
+    background: rgba(255, 255, 255, 0.25); 
     padding: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     
-    /* אפקט הטשטוש היוקרתי */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    /* אפקט זכוכית חלבית */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
@@ -111,17 +111,18 @@ h1 {
 }
 
 .skill-item i {
-    filter: brightness(1.15); /* הבהרה נוספת של הסמלים */
+    /* הבהרה וחיזוק הצבעים של הסמלים */
+    filter: brightness(1.2) contrast(1.1); 
 }
 
 .skill-item:hover {
-    transform: scale(1.15) translateY(-4px);
-    background: rgba(255, 255, 255, 0.25); 
+    transform: scale(1.15) translateY(-5px);
+    background: rgba(255, 255, 255, 0.35); 
     border-color: var(--primary-color);
-    filter: drop-shadow(0 0 12px rgba(76, 175, 80, 0.4));
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
 }
 
-/* Academic/Bullet list style - Glass style for consistency */
+/* Academic Skills - Glass Capsules */
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -131,9 +132,10 @@ h1 {
 }
 
 .skill-list li {
-    background: rgba(255, 255, 255, 0.08); 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
+    /* רקע לבנבן (15%) לאחידות עם הסמלים למעלה */
+    background: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -141,12 +143,13 @@ h1 {
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-    color: #fff;
+    color: #ffffff; /* טקסט לבן בוהק לקריאות מקסימלית */
+    font-weight: 500;
 }
 
 .skill-list li:hover {
     border-color: var(--primary-color);
-    background: rgba(76, 175, 80, 0.1);
+    background: rgba(76, 175, 80, 0.2);
     transform: translateY(-2px);
 }
 
