@@ -93,10 +93,11 @@ h1 {
 }
 
 .skill-item {
-    background: rgba(255, 255, 255, 0.04); /* הוספת רקע עדין מאוד להפרדה מהרקע הכהה */
+    /* שימוש בלבן שקוף (0.08) שיוצר ניגודיות מבלי לשבור את המראה הכהה */
+    background: rgba(255, 255, 255, 0.08); 
     padding: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
@@ -105,12 +106,12 @@ h1 {
 }
 
 .skill-item i {
-    filter: brightness(1.1); /* הבהרה קלה של הסמלים בברירת מחדל */
+    filter: brightness(1.1); /* הבהרה קלה של הסמלים */
 }
 
 .skill-item:hover {
     transform: scale(1.1) translateY(-3px);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.15); /* התבהרות קלה בריחוף */
     border-color: var(--primary-color);
     filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.3));
 }
@@ -125,8 +126,8 @@ h1 {
 }
 
 .skill-list li {
-    background-color: transparent; /* הסרת הרקע האפור הכבד */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* מסגרת דקה במקום */
+    background-color: rgba(255, 255, 255, 0.05); /* גם כאן לבן שקוף לאחידות */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -140,7 +141,7 @@ h1 {
 .skill-list li:hover {
     border-color: var(--primary-color);
     color: white;
-    background: rgba(76, 175, 80, 0.05);
+    background: rgba(76, 175, 80, 0.08);
 }
 
 .skill-list i {
