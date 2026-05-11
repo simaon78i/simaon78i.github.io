@@ -93,11 +93,16 @@ h1 {
 }
 
 .skill-item {
-    /* שימוש בלבן שקוף (0.08) שיוצר ניגודיות מבלי לשבור את המראה הכהה */
-    background: rgba(255, 255, 255, 0.08); 
+    /* אפקט זכוכית לבנה כהה - ניגודיות גבוהה לסמלים כהים */
+    background: rgba(255, 255, 255, 0.15); 
     padding: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* אפקט הטשטוש היוקרתי */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
@@ -106,17 +111,17 @@ h1 {
 }
 
 .skill-item i {
-    filter: brightness(1.1); /* הבהרה קלה של הסמלים */
+    filter: brightness(1.15); /* הבהרה נוספת של הסמלים */
 }
 
 .skill-item:hover {
-    transform: scale(1.1) translateY(-3px);
-    background: rgba(255, 255, 255, 0.15); /* התבהרות קלה בריחוף */
+    transform: scale(1.15) translateY(-4px);
+    background: rgba(255, 255, 255, 0.25); 
     border-color: var(--primary-color);
-    filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.3));
+    filter: drop-shadow(0 0 12px rgba(76, 175, 80, 0.4));
 }
 
-/* Academic/Bullet list style - Updated for consistency */
+/* Academic/Bullet list style - Glass style for consistency */
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -126,8 +131,9 @@ h1 {
 }
 
 .skill-list li {
-    background-color: rgba(255, 255, 255, 0.05); /* גם כאן לבן שקוף לאחידות */
-    border: 1px solid rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.08); 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -135,13 +141,13 @@ h1 {
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-    color: #bbb;
+    color: #fff;
 }
 
 .skill-list li:hover {
     border-color: var(--primary-color);
-    color: white;
-    background: rgba(76, 175, 80, 0.08);
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateY(-2px);
 }
 
 .skill-list i {
